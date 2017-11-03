@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>IA 683 Project</title>
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="resources/js/app.js"></script>
+    <!-- <script type='text/javascript' src='resources/js/mobile.js'></script> -->
+    <script type='text/javascript' src='resources/js/function.js'></script>
+    <script type='text/javascript' src='resources/js/jquery-1.11.1.min.js'></script>
+    <script type='text/javascript' src='resources/js/loginInfo.js'></script>
+	 <!-- <link rel="stylesheet" type="text/css" href="resources/css/mfa.css"> -->
+	<!--<link rel="stylesheet" type="text/css" href="resources/css/mobile.css"> -->
+	<!-- <script src="https://smart-ip.net/geoip-json?callback=ip_callback"></script> -->
+	
+</head>
+<body>
+	 <div id="header">
+		<center>
+		   	<h1>Multi-factor Authentication</h1>
+		</center>
+	</div>
+	<div id="body">
+	<center>
+		<img align="middle" height="200px" width="300px"  alt="Java" 
+		src="https://blog.perfectcloud.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-07-at-12.14.39-PM.png">
+	</center><br>
+	<h3>Test MFA:</h3>
+	<div id="test">
+	<form id="login">
+        <fieldset>
+ 				<div style="width:100%">
+ 					<legend><b>MFA Step 1:</b></legend>
+ 					<div style="float:left; width:600px">
+                    User Name:<input id="userName" type="text" name="userName" /><br>
+                    <lable for="userPassword">User Pass:</lable>
+                    <input id="userPassword" type="password" name="userPassword" /><br><br>
+                    IP Address :<input id="ipAddress" type="text" name="ipAddress" /><br>
+                    MAC Address:<input id="macAddress" type="text" name="macAddress" /><br><br>
+                    
+                    <input id="submitPass" type="button" value="Submit" />
+                	</div>
+                </div>
+        </fieldset>
+    </form><br>
+    <form id="login1">
+        <fieldset>
+                <div style="width:100%">
+ 					<legend><b>MFA Step 2:</b></legend>
+ 					<div style="float:left; width:600px">
+                    User Name and Password:<div id="passResponse"></div><br><br>
+                    <div id="barrierResponse"></div>
+                    <input type="radio" name="answer" value="right" checked> Right Answer
+  					<input type="radio" name="answer" value="wrong"> Wrong Answer<br>
+                    <input id="submitAnswer" type="button" value="Submit Answer" />
+                	</div>
+                </div>
+        </fieldset>
+    </form><br>
+    <div style="float:center; width=100%">
+            <legend>Response from MySQL DB:</legend><br>
+            <div id="ajaxResponse"></div>
+    </div>
+  	</div>
+	</div>
+	<div id="footer">
+		<div>
+			<p>
+				14A Centennial Hall, SCSU | 2017 Spring &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&copy; 2017 by Team 1. All rights reserved.
+			</p>
+		</div>
+		
+	</div>
+</body>
+</html>
