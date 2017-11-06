@@ -8,9 +8,9 @@ Algorithm/Policy
 ----------------
 We built a Risk Engine which will be responsible for calculating risk score  for each user logging in. The policy for this algorithm is based on  4 big factors: Location, Device, Weekday and Time. Different login facors will get different risk score. Differnt risk score will lead to user providing different user information to confirm correct user login.
 [Algorithm](https://github.com/mndarren/Multi-factor-Authentication/blob/master/documents/algorithmPolicy.pdf)<br/>
-Sequence Dia<br/>
+*Sequence Dia*<br/>
 ![alt Sequence Diagram](https://github.com/mndarren/Multi-factor-Authentication/blob/master/documents/SequenceDia.PNG)<br/>
-Risk Engine<br/>
+*Risk Engine*<br/>
 ![alt Risk Engine](https://github.com/mndarren/Multi-factor-Authentication/blob/master/documents/RiskEngine.PNG)
 
 Documentation
