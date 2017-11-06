@@ -25,5 +25,5 @@ Notes
 -------
 1. This project is just providing a prototype for Multi-factor Anthentication.  
 Actually the basic idea should be more important than this prototype.  
-2. This project can be developed further more.
+2. This project can be developed further more. For example, all queries in the java code can be moved in the DB, which makes Web Application more robust.
 3. Any questions, welcome to contact me via mndarren@gmail.com
