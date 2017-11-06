@@ -24,7 +24,7 @@ DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `verifyAndUpdate` (IN `userId` VARCHAR(30), IN `dayIn` VARCHAR(30), IN `timeIn` VARCHAR(30), IN `ipAddr` VARCHAR(30), IN `zipcodeIn` VARCHAR(15), IN `cityIn` VARCHAR(30), IN `stateIn` VARCHAR(30), IN `countryIn` VARCHAR(30), IN `macIn` VARCHAR(30))  BEGIN
+CREATE PROCEDURE `verifyAndUpdate` (IN `userId` VARCHAR(30), IN `dayIn` VARCHAR(30), IN `timeIn` VARCHAR(30), IN `ipAddr` VARCHAR(30), IN `zipcodeIn` VARCHAR(15), IN `cityIn` VARCHAR(30), IN `stateIn` VARCHAR(30), IN `countryIn` VARCHAR(30), IN `macIn` VARCHAR(30))  BEGIN
 	IF ( SELECT EXISTS (SELECT 1 FROM `location_ip` WHERE `user_id`=userId and `ip`=ipAddr) ) THEN 
         UPDATE `location_ip` SET `count`=`count`+1 WHERE `user_id`=userId and `ip`=ipAddr;
     ELSE
