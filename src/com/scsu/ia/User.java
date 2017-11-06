@@ -1,5 +1,9 @@
 package com.scsu.ia;
-
+/**
+ * @purpose User class will contain all user information
+ * @author Darren
+ *
+ */
 public class User {
 
 	private String userId = null;

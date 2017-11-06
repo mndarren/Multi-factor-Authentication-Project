@@ -1,5 +1,10 @@
 package com.scsu.ia;
-
+/**
+ * @purpose Policy class contains policy constant values. With it,
+ *          user can easily change policy
+ * @author Darren
+ *
+ */
 public class Policy {
 	public final static int LOCATION = 30;
 	public final static int LOCATION_ZIPCODE = 5;

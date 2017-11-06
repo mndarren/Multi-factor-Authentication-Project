@@ -17,9 +17,13 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
+/**
+ * @purpose DBManager is responsible for communicating with MySQL DB,
+ *          including retrieving data and updating data
+ * @author Darren
+ *
+ */
 public class DBManager {
-//	INSTANCE;
 	private User user = new User();
 	private Connection conn = null;            
 	private Statement stmt = null;  
@@ -27,16 +31,11 @@ public class DBManager {
 	private CallableStatement cstmt = null;
 	private ResultSet rs = null;
 	private String sql = null;
-//	private static String url = "jdbc:mysql://localhost:3306/ia683project";
-//	private static String DBName = "root";
-//	private static String DBPass = "";
-//	private DBManager(){}
-	
+	//get user data from DB based on user id coming from client side
     public User getInfo(User loginInfo) {
         try {      
             Context ctx = (Context) new InitialContext().lookup("java:comp/env");
             conn = ((DataSource) ctx.lookup("jdbc/mysql")).getConnection(); 
-//            conn = DriverManager.getConnection(url, DBName, DBPass);
             stmt = conn.createStatement();
             String userId = loginInfo.getUserId();
             
@@ -59,7 +58,6 @@ public class DBManager {
             user.setZipcodeCount(zipcodeWeight);
             user.setMacCount(macWeight);
  
-//            System.out.println(user.toString());
             rs.close();                                                               
             stmt.close();                                                             
             stmt = null;                                                              
@@ -88,10 +86,10 @@ public class DBManager {
         }              
         return user;
     }  
+    //update user data in DB once user login successfully
     public boolean updateUser(User loginInfo) throws NamingException, SQLException{
     	Context ctx = (Context) new InitialContext().lookup("java:comp/env");
         conn = ((DataSource) ctx.lookup("jdbc/mysql")).getConnection(); 
-//        conn = DriverManager.getConnection(url, DBName, DBPass);
         cstmt=conn.prepareCall("{call verifyAndUpdate(?,?,?,?,?,?,?,?,?)}"); 
         
         cstmt.setString(1,loginInfo.getUserId());  
@@ -105,7 +103,6 @@ public class DBManager {
         cstmt.setString(9,loginInfo.getMac());
         
         cstmt.execute();         
-//        flushData();
     	return true;
     }
     
@@ -194,13 +191,12 @@ public class DBManager {
 		}
 	    return 0;
     }
-
+    //check if the user is registered in DB
 	public boolean isCorrectUser(String userId, String userPass) {
 		boolean isRightUser = false;
 		try {      
             Context ctx = (Context) new InitialContext().lookup("java:comp/env");
             conn = ((DataSource) ctx.lookup("jdbc/mysql")).getConnection(); 
-//			conn = DriverManager.getConnection(url, DBName, DBPass);
  
             sql = "select * from user where user_id = ? and user_pass = ?;"; 
             pstmt = conn.prepareStatement(sql);

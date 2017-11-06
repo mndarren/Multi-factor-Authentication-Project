@@ -5,7 +5,12 @@ import java.io.IOException;
 import com.maxmind.geoip.Location;
 import com.maxmind.geoip.LookupService;
 import com.maxmind.geoip.regionName;
-
+/**
+ * @purpose GetLocationFromIP class will use 3rd party library to convert IP address
+ *          to Location information
+ * @author Darren
+ *
+ */
 public class GetLocationFromIp {
 
 	  public User getLocation(User user) {

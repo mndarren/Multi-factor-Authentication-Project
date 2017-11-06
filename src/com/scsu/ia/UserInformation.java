@@ -21,10 +21,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//import javax.sql.DataSource;
 
 /**
- * Servlet implementation class CountryInformation
+ * @purpose UserInformation Servlet communicate with Client side
+ * @author Darren
  */
 public class UserInformation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -53,9 +53,7 @@ public class UserInformation extends HttpServlet {
 		String ipAddr = request.getParameter("ipAddr");
 		String mac = request.getParameter("macAddr");
 		System.out.println("In Servlet, IP = "+ipAddr + "   MAC = "+mac);
-		Gson gson = new Gson();
-		//ipAddr = "199.17.59.234";
-		
+		Gson gson = new Gson();		
 		
 		String day = getWeekday();
 		int time = LocalDateTime.now().getHour();

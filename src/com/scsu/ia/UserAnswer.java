@@ -17,9 +17,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 /**
- * Servlet implementation class UserAnswer
+ * @purpose UserAnswer Servlet will communicat with Client side
+ * @author Darren
  */
-//@WebServlet("/UserAnswer")
 public class UserAnswer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -36,7 +36,6 @@ public class UserAnswer extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 		doPost(request,response);
 	}
 
@@ -46,7 +45,6 @@ public class UserAnswer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String userId = request.getParameter("userName");
-//		String userPass = request.getParameter("userPass");
 		String userAnswer = request.getParameter("userAnswer");
 		
 		System.out.println("In Answer Servlet, userAnswer = "+userAnswer);

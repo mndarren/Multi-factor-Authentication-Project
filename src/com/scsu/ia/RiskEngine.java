@@ -12,7 +12,12 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
+/**
+ * @purpose RiskEngie is a singleton which is charge of calculating the risk score
+ *          for each user login based on location, time, date, device MAC
+ * @author Darren
+ *
+ */
 public enum RiskEngine {
 	INSTANCE;
     private DBManager dbManager = new DBManager();
@@ -51,10 +56,9 @@ public enum RiskEngine {
         jo.addProperty("finalScore", finalScore); 
         return jo;
     }
-	
+	//reset data
 	public void flushData() {
-		// TODO Auto-generated method stub
-//		DBManager.INSTANCE.flushData();;
+
 		dbManager = new DBManager();
 	    isCorrectUser = false;
 	    finalScore = 0;
@@ -145,7 +149,7 @@ public enum RiskEngine {
 			return 0;
 		}
 	}
-	
+	//for second check
 	public JsonObject isCorrect4SecondCheck(String userId, String userAnswer) throws NamingException, SQLException{
 		JsonObject jsonObject = new JsonObject();
 		if("right".equals(userAnswer) && userId.equals(loginInfo.getUserId())){
