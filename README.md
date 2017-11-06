@@ -1,8 +1,8 @@
 # Multi-factor Authentication Project
-======================================<br/>
-Purpose
+======================================<br/><br/>
+Description
 --------
-This project will simulate a Multi-factor Authentication algorithm via a  web application. This is a simple prototype.
+This project will simulate a Multi-factor Authentication algorithm via a  web application. This prototype is developed on IDE Eclipse. Running it on Tomcat 8 Web server.
 
 Algorithm/Policy
 ----------------
