@@ -5,11 +5,6 @@ $(document).ready(function() {
     $("#login").submit(function(e){
            e.preventDefault();
     });
-    
-	/*$.getJSON("http://jsonip.com/?callback=?", function (data) {
-        console.log(data);
-        ipAddr =  data.ip;
-    });*/
 	
     //checks for the button click event
     $("#submitPass,#submitAnswer").click(function(e){
@@ -40,12 +35,8 @@ $(document).ready(function() {
                     //our country code was correct so we have some information to display
                 	if(data.success){
                     	 $("#passResponse").html("<div><b>Passed!</b></div>");
-//                    	 if(data.finalScore){
-//                    		 console.log("finalScore = "+data.finalScore);
-//                    		 $("#barrierResponse").html("<b>Successfully Login!!</b>");
-//                    	 } else {
-                    		 $("#barrierResponse").html("<b>Please enter: " + data.barrier+"</b>");
-//                    	 }
+
+                    	 $("#barrierResponse").html("<b>Please enter: " + data.barrier+"</b>");
                     	 
                     	 $("#ajaxResponse").html("");
                     	 $("#ajaxResponse").append("<b>IP:</b> " + data.user.ipAddr + "   <b>Zipcode:</b>"+data.user.zipcode
