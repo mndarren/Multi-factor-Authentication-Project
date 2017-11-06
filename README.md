@@ -27,7 +27,8 @@ Example
 ![alt before_test](https://github.com/mndarren/Multi-factor-Authentication/blob/master/others/before_test.PNG)
 2. Test step 1<br/>
 ![alt test_step1](https://github.com/mndarren/Multi-factor-Authentication/blob/master/others/test_step1.PNG)
-3. Test step 2, because this login only got 70/100, based on the policy, the user had to provide secret question answer.<br/>
+3. Test step 2, because this login only got 70/100, based on the policy, the user had to provide secret question answer. Since the user provided correct answer and logged in successfully, this login information was inserted in the login DB.<br/>
+
 ![alt test_step2](https://github.com/mndarren/Multi-factor-Authentication/blob/master/others/test_step2.PNG)
 
 Notes
