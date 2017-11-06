@@ -1,5 +1,5 @@
 # Multi-factor Authentication Project
-===============================
+======================================<br/>
 Purpose
 --------
 This project will simulate a Multi-factor Authentication algorithm via a  web application. This is a simple prototype.
