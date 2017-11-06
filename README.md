@@ -7,7 +7,7 @@ This project will simulate a Multi-factor Authentication algorithm via a  web ap
 Algorithm/Policy
 ----------------
 We built a Risk Engine which will be responsible for calculating risk score  for each user logging in. The policy for this algorithm is based on  4 big factors: Location, Device, Weekday and Time. Different login facors will get different risk score. Differnt risk score will lead to user providing different user information to confirm correct user login.
-![alt Algorithm](https://github.com/mndarren/Multi-factor-Authentication/blob/master/documents/algorithmPolicy.pdf)<br/>
+[Algorithm](https://github.com/mndarren/Multi-factor-Authentication/blob/master/documents/algorithmPolicy.pdf)<br/>
 *Sequence Dia*<br/>
 ![alt Sequence Diagram](https://github.com/mndarren/Multi-factor-Authentication/blob/master/documents/SequenceDia.PNG)<br/>
 *Risk Engine*<br/>
